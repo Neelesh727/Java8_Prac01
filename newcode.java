@@ -40,8 +40,24 @@ public static void main(String[] args) {
 	String ty ="gjhgsiiiiiiiqqqqqqqqaaaaaaaaaallllllllllhgjhsdcsppppxxxzzjjjjjuyyyy";
 	    String tyy =   Arrays.stream(ty.split("")).sorted().collect(Collectors.joining());
 	    System.out.println(tyy);
-	
-}
 
+   //Write a code to check whether given string is anagram or not
+           Scanner sc = new Scanner(System.in);
+           System.out.println("Enter your Number");
+           int a = sc.nextInt();
+           boolean flag = isPrime(a);
+           if(flag) {
+        	   System.out.println("Yes");
+           }else {
+        	   System.out.println("No");
+           }         
 }
+}
+private static boolean isPrime(int a) {
+	// TODO Auto-generated method stub
+	if(a<=1) return false;
+	 return IntStream.rangeClosed(2, (int)Math.sqrt(a)).noneMatch(i->a%i==0);
+}
+	
+
        
